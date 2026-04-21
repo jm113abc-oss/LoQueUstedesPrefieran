@@ -1,18 +1,17 @@
 using UnityEngine;
 
-public class DmgObj : MonoBehaviour
+public class Dangerobject : MonoBehaviour
 {
     private void OnTriggerStay2D(Collider2D collision)
     {
         Pcont controller = collision.GetComponent<Pcont>();
 
         if (controller != null)
-
         {
-            //controller.ChangeLive(-1);
-            Debug.Log("Estás perdiendo vida");  
+            controller.ChangeHealt(-1);
+            Debug.Log("estas perdiendo vida");
         }
-
-
     }
+
+
 }

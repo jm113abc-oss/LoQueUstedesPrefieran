@@ -3,6 +3,15 @@ using UnityEngine.InputSystem;
 
 public class Pcont : MonoBehaviour
 {
+
+    public int maxHealt = 100;
+    public int Health { get { return currentHealt; } }
+    int currentHealt;
+    public float speed = 3.0f;
+    //public float invencibleT = 2.0f;
+    //bool isinvencible;
+    //float invencibletimer;
+
     [Header("Movimiento")]
     public float moveSpeed = 5f;
     Rigidbody2D rb;
@@ -12,6 +21,8 @@ public class Pcont : MonoBehaviour
 
     InputAction moveAction;
 
+
+
     void Awake()
     {
         inputActions = new InputSystem_Actions();
@@ -19,6 +30,9 @@ public class Pcont : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         moveAction = inputActions.Player.Move;
+
+        currentHealt = maxHealt;
+
     }
 
     void OnEnable()
@@ -34,6 +48,19 @@ public class Pcont : MonoBehaviour
     void Update()
     {
         moveInput = moveAction.ReadValue<Vector2>().normalized;
+    }
+
+    public void ChangeHealt (int amount)
+    {
+        /*if (amount < 0)
+        {
+           // return;
+            //isinvencible = true;
+            //invencibletimer = invencibleT;
+        }*/
+
+        currentHealt = Mathf.Clamp(currentHealt + amount, 0, maxHealt);
+
     }
 
     void FixedUpdate()

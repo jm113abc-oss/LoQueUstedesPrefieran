@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "pruebaInput",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "585d1897-9733-4eff-a6c3-71ac772ec5c8",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "2daa0646-c3e3-4d43-8f01-1e1f204932ec",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5781c900-7d13-4389-97b4-5d56e6a4ff60",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "709a73d9-8149-4003-8e57-44f74f3e5eaa",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "Normalize(min=1,max=5)",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
